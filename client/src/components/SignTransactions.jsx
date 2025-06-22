@@ -11,9 +11,11 @@ const SignTransactions = () => {
   const [connectedAccount, setConnectedAccount] = useState(null);
   const [activeTab, setActiveTab] = useState('goods'); // 'goods' or 'monetary'
   const navigate = useNavigate();
+  // eslint-disable-next-line no-unused-vars
   const { connected, account, connect, disconnect, wallet, wallets } = useWallet();
 
   // Initialize Aptos Client
+  // eslint-disable-next-line no-unused-vars
   const client = new Aptos();
 
   useEffect(() => {
