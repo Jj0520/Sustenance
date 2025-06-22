@@ -47,7 +47,7 @@ app.use('/api/chat', chatRoutes); // Added chat routes
 app.use('/api/social', socialRoutes); // Add social routes
 
 // Test route directly in server.js
-app.get('/test', (req, res) => {
+app.get('/api/test', (req, res) => {
     res.json({ message: 'Server is working' });
 });
 
@@ -131,7 +131,10 @@ async function runChat(userInput) {
 // Serve static files
 app.use(express.static('public'));
 
+/*
 const port = process.env.PORT || 5001; // Updated to match the working implementation
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
+*/
+module.exports = app;
