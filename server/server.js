@@ -27,7 +27,7 @@ app.use((req, res, next) => {
 // Middleware
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? ['https://your-app-name.vercel.app'] 
+    ? ['https://sustenance.vercel.app'] 
     : ['http://localhost:3002'], // Updated to match frontend port
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
