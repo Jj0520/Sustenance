@@ -1,0 +1,174 @@
+.admin-dashboard-container {
+  padding: 60px 20px 20px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 280px);
+  background-color: #000000;
+  color: white;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  margin-top: 30px;
+}
+
+.dashboard-header h1 {
+  color: #4CAF50;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.admin-badge {
+  background-color: #ff6b35;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.welcome-section {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.welcome-section h2 {
+  color: #4CAF50;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.admin-description {
+  color: #aaa;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.dashboard-card {
+  background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  border-color: #4CAF50;
+  box-shadow: 0 10px 25px rgba(76, 175, 80, 0.2);
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.dashboard-card h3 {
+  color: #4CAF50;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.dashboard-card p {
+  color: #aaa;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.admin-stats {
+  background: linear-gradient(135deg, #1a1a1a 0%, #111111 100%);
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.admin-stats h3 {
+  color: #4CAF50;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.admin-stats p {
+  color: #aaa;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.loading-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: #888;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .admin-dashboard-container {
+    padding: 15px;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .dashboard-header h1 {
+    font-size: 2rem;
+  }
+
+  .welcome-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .dashboard-card {
+    padding: 25px;
+  }
+
+  .card-icon {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-dashboard-container {
+    padding: 10px;
+  }
+
+  .dashboard-card {
+    padding: 20px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 1.8rem;
+  }
+} 
