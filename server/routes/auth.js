@@ -1,13 +1,9 @@
 const router = require('express').Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const { Pool } = require('pg');
+const pool = require('../config/db'); // Use the shared pool
 const multer = require('multer');
 const path = require('path');
-
-const pool = new Pool({
-    connectionString: 'postgresql://jjlim:npg_vkfzlprwGJ18@ep-fragrant-wind-a1u7i59x-pooler.ap-southeast-1.aws.neon.tech/sustenance_db?sslmode=require'
-});
 
 // Set up multer for file upload
 const storage = multer.diskStorage({
@@ -185,8 +181,8 @@ router.post('/upload-photo', upload.single('photo'), async (req, res) => {
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
         const userId = decoded.id;
 
-        // Create the photo URL
-        const photo_url = `http://localhost:5001/uploads/${req.file.filename}`;
+        // Create the photo URL without localhost
+        const photo_url = `/uploads/${req.file.filename}`;
 
         // Update user's photo_url in database
         await pool.query(
