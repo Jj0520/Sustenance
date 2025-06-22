@@ -257,7 +257,7 @@ const SocialFeedPage = () => {
                           }
                           return `http://localhost:5001/uploads/${post.image_url}`;
                         })()} 
-                        alt="Post image"
+                        alt=""
                         className="post-image"
                       />
                     )}
