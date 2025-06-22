@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.page-enter {
+    opacity: 0;
+}
+
+.page-enter-active {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.page-exit {
+    opacity: 1;
+}
+
+.page-exit-active {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Custom toast styles */
+.Toastify__toast--success {
+    background: #4CAF50 !important;
+    color: white !important;
+    border-radius: 4px !important;
+    font-family: 'Arial', sans-serif !important;
+}
+
+.Toastify__close-button {
+    color: white !important;
+}
+
+.Toastify__progress-bar {
+    background: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Toast Styles */
+.Toastify__toast--success {
+  background: rgba(76, 175, 80, 0.9) !important;
+  color: white !important;
+  border-radius: 4px !important;
+  font-family: 'Arial', sans-serif !important;
+  padding: 12px !important;
+  min-height: 40px !important;
+}
+
+/* Hide close button */
+.Toastify__close-button {
+  display: none !important;
+}
+
+/* Hide progress bar */
+.Toastify__progress-bar {
+  display: none !important;
+}
+
+/* Hide the success icon */
+.Toastify__toast-icon {
+  display: none !important;
+}
+
+/* Adjust toast content spacing */
+.Toastify__toast-body {
+  padding: 0 12px !important;
+  margin: 0 !important;
+  text-align: center !important;
+}
+
+/* Adjust toast container position */
+.Toastify__toast-container {
+  padding: 0 !important;
+} 
